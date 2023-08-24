@@ -1,0 +1,7 @@
+In order to install 
+
+:Follow these instructions 
+
+download python and all the other files 
+
+Then run builder.exe.
