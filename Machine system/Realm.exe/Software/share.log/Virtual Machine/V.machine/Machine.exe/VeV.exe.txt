@@ -1,0 +1,46 @@
+"""
+Program to Generate Error Message
+
+This program provides a function to generate an error message.
+
+"""
+
+import logging
+
+# Setting up logging to monitor performance and errors
+logging.basicConfig(level=logging.INFO)
+
+def generate_error_message(message: str) -> str:
+    """
+    Generate Error Message
+
+    This function takes a message as input and generates an error message.
+
+    Args:
+    message (str): The error message to generate.
+
+    Returns:
+    str: The generated error message.
+
+    Examples:
+    >>> generate_error_message("Invalid input")
+    'Error: Invalid input'
+
+    >>> error_message = generate_error_message("File not found")
+    >>> print(error_message)
+    Error: File not found
+    """
+    try:
+        logging.info("Generating error message...")
+        error_message = f"Error: {message}"
+        return error_message
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")
+        return None
+
+if __name__ == "__main__":
+    error_message = generate_error_message("Invalid input")
+    if error_message:
+        print(error_message)
+    else:
+        print("Failed to generate error message.")
